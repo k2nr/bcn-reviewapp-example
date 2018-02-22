@@ -1,7 +1,7 @@
 environments:
   production:
     name: nginx-example
-    image_name: k2nr/bcn-reviewapp-example
+    image_name: quay.io/k2nr/bcn-reviewapp-example
     services:
       - name: web
         service_type: web
@@ -16,7 +16,7 @@ reviewapp:
   district: test-district
   base_domain: reviewapp.k2nr.me
   template:
-    image_name: k2nr/bcn-reviewapp-example
+    image_name: quay.io/k2nr/bcn-reviewapp-example
     services:
       - name: web
         service_type: web
