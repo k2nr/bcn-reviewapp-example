@@ -1,0 +1,27 @@
+environments:
+  production:
+    name: nginx-example
+    image_name: k2nr/bcn-reviewapp-example
+    services:
+      - name: web
+        service_type: web
+        cpu: 128
+        memory: 128
+        command: nginx -g "daemon off;"
+        listeners:
+          - endpoint: test-endpoint
+
+reviewapp:
+  group: example
+  district: test-district
+  base_domain: review.example.com
+  template:
+    image_name: k2nr/bcn-reviewapp-example
+    services:
+      - name: web
+        service_type: web
+        cpu: 128
+        memory: 128
+        command: nginx -g "daemon off;"
+        listeners:
+          - endpoint: test-review-endpoint
