@@ -14,7 +14,7 @@ environments:
 reviewapp:
   group: example
   district: test-district
-  base_domain: review.example.com
+  base_domain: reviewapp.k2nr.me
   template:
     image_name: k2nr/bcn-reviewapp-example
     services:
